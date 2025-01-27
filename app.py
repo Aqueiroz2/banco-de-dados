@@ -12,3 +12,19 @@ cursor.execute("""
     );
 """)
 conexao.commit()
+
+nome = input('Digite seu nome: ')
+cargo = input('Digite um cargo: ')
+data = input('Digite uma data no formato aaaa-mm-dd: ')
+
+cursor.execute("INSERT INTO Funcionarios VALUES (?, ?, ?, ?)",
+               (1, nome, cargo, data))
+conexao.commit()
+
+
+nome = input('Digite seu nome: ')
+cargo = input('Digite um cargo: ')
+data = input('Digite uma data no formato aaaa-mm-dd: ')
+cursor.execute("INSERT INTO Funcionarios VALUES (?, ?, ?, ?)",
+               (2, nome, cargo, data))
+conexao.commit()
